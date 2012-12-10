@@ -1,0 +1,41 @@
+<p>
+    <a href="http://www.surreyflora.org.uk/favicon.ico" target="outside_link">Surrey Botanical Society</a><br> <p>Originally known as Surrey Flora Committee, our Surrey Botanical Society has been well-established for many years, to represent and unite all those who want to enjoy, study, and record Surrey's astonishingly interesting, beautiful, and diverse flora.</p>
+    <a href="http://www.surreycc.gov.uk/sccwebsite/sccwspages.nsf/LookupWebPagesByTITLE_RTF/Lower+Mole+project?open%20document" target="outside_link">
+      Lower Mole Countryside Project</a><br> <p>The Lower Mole Project is a partnership with boroughs, districts and other organisations.The Lower Mole Countryside Management Project has been in existence since 1983 and was the first Project to be established in the north Surrey area. It has built up a large and enthusiastic volunteer group which carries out a wide range of tasks to implement improvements to the local countryside, 4 days a week, including weekends, throughout the year.</p>
+    <a href="http://www.nationaltrust.org.uk/main/w-global/w-localtoyou/w-south_east/w-south_east-contact_us.htm" target="outside_link">National
+      Trust</a><br> <p>The idea of the National Trust is born when Octavia Hill, one of our founders, is asked to help preserve Sayes Court garden in south east London.A short expressive name is needed for the new company, Sir Robert Hunter suggests National Trust.Within a few weeks of the National Trust being registered under the Companies Act, it was given its first place – five acres of cliff top at Dinas Oleu in Wales.We acquire our first nature reserve with the purchase of two acres of Wicken Fen, near Cambridge</p>
+    <a href="http://www.surreywildlifetrust.co.uk/" target="outside_link">Surrey Wildlife Trust</a><br> <p>Surrey Wildlife Trust works to protect Surrey’s unique network of wildlife habitats through a comprehensive program of data recording, ecological surveys and management plans.Set up in 1991, Surrey Wildlife Trust Consultancy is a specialist service within the organisation, comprising experienced and highly qualified professional ecologists all of whom are dedicated to nature conservation. We offer a broad spectrum of ecological expertise and surveys at competitive prices.</p>
+    <a href="http://surrey-arg.org.uk/" target="outside_link">Surrey Amphibian and Reptile Group</a><br> 
+    <a href="http://www.surreybutterflies.org/rss/index.xml" target="outside_link">Butterfly Conservation</a><br> <p>Surreybutterflies.org represents the Surrey Branch of the British Butterfly Conservation Society. This site provides information on butterflies and their habitats in Surrey along with branch news and events. Special features are the Oaken Woodl Reserve pages and up-to-date information on the status of butterflies & moths in the county. </p>
+    <a href="http://www.molevalley.gov.uk/" target="outside_link">Mole Valley District Council</a><br> <p>The Conservation Section plays a significant role in the protection and enhancement of both the built environment and the countryside of Mole Valley.</p>
+    <a href="http://www.rspb.org.uk/groups/dorkinganddistrict" target="outside_link">RSPB Dorking and District Local
+      Group</a><br><p>The Group covers a large area of mid-Surrey but centered on Dorking, Leatherhead and The Bookhams. During the winter indoor meetings are held once a month. Bird-watching walks and related activities are organised at the weekends and mid-week: a coach is usually arranged for the more remote destinations. Most of the walks are fairly easy. New members are always welcome and a special effort is made for those who are beginners.</p>
+    Leatherhead and District Countryside Protection Society<br></p>
+    <a href="http://www.britmycolsoc.org.uk/" target="outside_link">British Mycological Society</a><br><p>is a registered British Charity open to all who are interested in promoting and learning about the exciting world of fungi. It has member sections devoted to particular aspects of the fungal world including cutting edge research into many aspects of fungal science, the conservation and recording of fungi and the provision of educational resources for use at all ages and experience. If you are working with, fascinated by or wish to learn about fungi the Society can help.</p>
+
+  </p>
+<h1>Listing organisations</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @organisations.each do |organisation| %>
+  <tr>
+    <td><%= organisation.name %></td>
+    <td><%= organisation.description %></td>
+    <td><%= link_to 'Show', organisation %></td>
+    <td><%= link_to 'Edit', edit_organisation_path(organisation) %></td>
+    <td><%= link_to 'Destroy', organisation, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Organisation', new_organisation_path %>

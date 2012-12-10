@@ -1,0 +1,31 @@
+/*layout.css
+*
+*basic styling for the static pages
+*
+*/
+
+
+div#container{
+	display:block;
+	position: relative;
+	min-height:auto;
+	width:auto;
+	margin: 0 auto;
+	padding: 18px;
+	background-color: #3C76D3
+}
+
+header#page_header {
+	background-color:#3333FF 
+	text-align: left;
+	text-align: center;
+	color:#000000;
+	padding:10px; 15px;
+	font-size: 18px;
+
+}
+
+nav#utility{
+	float: right;
+	font-size: 1em;
+}
